@@ -19,7 +19,7 @@ def get_bounds(data, factor):
     
   abs_x = 0
   abs_y = 0
-  for i in xrange(len(data)):
+  for i in range(len(data)):
     x = float(data[i,0])/factor
     y = float(data[i,1])/factor
     abs_x += x
@@ -42,7 +42,7 @@ def draw_strokes(data, factor=0.2, svg_filename = 'sample.svg'):
   abs_y = 25 - min_y
   p = "M%s,%s " % (abs_x, abs_y)
   command = "m"
-  for i in xrange(len(data)):
+  for i in range(len(data)):
     if (lift_pen == 1):
       command = "m"
     elif (command != "l"):
